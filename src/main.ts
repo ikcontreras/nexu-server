@@ -8,7 +8,6 @@ async function bootstrap() {
   app.useStaticAssets(join(__dirname, '..', 'static'))
   // app.setViewEngine('hbs');
   await app.listen(3000);
-  console.log(`Application is running on: ${await app.getUrl()}`);
 }
 
 bootstrap();
