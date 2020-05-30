@@ -5,8 +5,8 @@ import { join } from 'path'
 
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
-  app.useStaticAssets(join(__dirname, '..', 'static'))
-  // app.setViewEngine('hbs');
+  // app.useStaticAssets(join(__dirname, '..', 'static'))
+  app.setViewEngine('hbs');
   await app.listen(3000);
 }
 
